@@ -27,28 +27,38 @@
             font-weight: bold;
         }
         /* 비율에 따라 자동으로 크기 조정 */
-        .figure img {
-            width: 30%; /* 전체 화면의 80%에 맞게 조정 */
-            max-width: 300px; /* 최대 1000px로 제한 */
-            display: block;
-            margin: 0 auto;
+        /* 첫 번째 세 개 이미지를 가로로 배치 */
+        .figure {
+	    display: flex;
+	    justify-content: space-between;
+	    margin-bottom: 20px;
         }
-	.spectrogram-audio {
+        .figure img {
+	    width: 30%; /* 각 이미지가 30%의 너비를 차지 */
+	    max-width: 300px;
+        }
+
+        /* 스펙트로그램 이미지 가로 배열 */
+        .spectrogram {
 	    display: flex;
 	    justify-content: space-between;
-	    align-items: center;
-	}
-	.spectrogram img, .audio-control audio {
-	    width: 30%; /* 각 요소가 화면의 30%를 차지하여 삼등분 배치 */
-	    max-width: 300px; /* 최대 크기를 제한하여 균일하게 */
-	    display: inline-block;
-	    margin: 0 auto;
-	}
-	.audio-control {
+	    margin: 10px 0;
+        }
+        .spectrogram img {
+	    width: 30%; /* 각 이미지가 30%의 너비를 차지 */
+	    max-width: 300px;
+        }
+
+        /* 오디오 컨트롤 가로 배열 */
+        .audio-control {
 	    display: flex;
 	    justify-content: space-between;
-	    width: 100%;
-	}
+	    margin-top: 10px;
+        }
+        .audio-control audio {
+	    width: 30%; /* 각 오디오 컨트롤이 30%의 너비를 차지 */
+	    max-width: 300px;
+        }
         .download-icon {
             font-size: 14pt;
             font-weight: bold;
