@@ -28,29 +28,22 @@
         }
         /* 비율에 따라 자동으로 크기 조정 */
         /* 첫 번째 세 개 이미지를 가로로 배치 */
-        .figure-a {
-	    display: flex;
-	    margin-bottom: 20px;
+        .figure-container {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
         }
-        .figure-a img {
-	    width: 45%; /* 각 이미지가 30%의 너비를 차지 */
-	    max-width: 1000px;
+        .figure-container .figure-a img {
+            width: 40%; /* 각 이미지의 너비 비율 */
+            max-width: 1000px;
         }
-    	.figure-b {
-	    display: flex;
-	    margin-bottom: 20px;
+        .figure-container .figure-b img {
+            width: 30%;
+            max-width: 1000px;
         }
-        .figure-b img {
-	    width: 35%; /* 각 이미지가 30%의 너비를 차지 */
-	    max-width: 1000px;
-        }
-	.figure-c {
-	    display: flex;
-	    margin-bottom: 20px;
-        }
-        .figure-c img {
-	    width: 20%; /* 각 이미지가 30%의 너비를 차지 */
-	    max-width: 1000px;
+        .figure-container .figure-c img {
+            width: 20%;
+            max-width: 1000px;
         }
 
         /* 스펙트로그램 이미지 가로 배열 */
@@ -215,18 +208,19 @@
 
     <section class="content">
         <div class="dataset-name">Real-world Speech Enhancement (6-ch. CHiME-3 real dataset)</div>
+
+        <!-- 스펙트로그램 가로 배열 -->
         <div class="spectrogram">
             <img src="./Spectrogram/CHiME/noisy.png" alt="Noisy Spectrogram">
             <img src="./Spectrogram/CHiME/enhanced.png" alt="Enhanced Spectrogram">
         </div>
+
+        <!-- 오디오 컨트롤 가로 배열 -->
         <div class="audio-control">
-<!--             Add audio controls for each type (noisy, enhanced, clean) -->
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <audio controls>
                 <source src="./Audio/CHiME/noisy.wav" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <audio controls>
                 <source src="./Audio/CHiME/enhanced.wav" type="audio/mpeg">
                 Your browser does not support the audio element.
