@@ -28,22 +28,27 @@
     }
     /* figure-container: 이미지 간격 최소화 */
     .figure-container {
-        display: flex;
-        justify-content: flex-start; /* 왼쪽 정렬 */
-        gap: 0; /* 이미지 간 간격 제거 */
-        margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-start; /* 왼쪽 정렬 */
+    gap: 0; /* 이미지 간 간격 제거 */
+    margin-bottom: 20px;
     }
-    .figure-container .figure-a img {
-        width: 45%; /* 첫 번째 이미지 너비 */
-        max-width: 1000px;
+
+    .figure-container .figure-a {
+        flex-basis: 45%; /* 첫 번째 이미지가 50%의 너비 */
     }
-    .figure-container .figure-b img {
-        width: 35%; /* 두 번째 이미지 너비 */
-        max-width: 1000px;
+
+    .figure-container .figure-b {
+        flex-basis: 35%; /* 두 번째 이미지가 30%의 너비 */
     }
-    .figure-container .figure-c img {
-        width: 20%; /* 세 번째 이미지 너비 */
-        max-width: 1000px;
+
+    .figure-container .figure-c {
+        flex-basis: 20%; /* 세 번째 이미지가 20%의 너비 */
+    }
+
+    .figure-container img {
+        width: 100%; /* 각 컨테이너의 전체 너비를 채움 */
+        height: auto; /* 비율 유지 */
     }
     
     /* 스펙트로그램 이미지 가로 배열 */
