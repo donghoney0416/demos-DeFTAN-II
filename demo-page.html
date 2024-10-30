@@ -28,12 +28,28 @@
         }
         /* 비율에 따라 자동으로 크기 조정 */
         /* 첫 번째 세 개 이미지를 가로로 배치 */
-        .figure {
+        .figure-a {
 	    display: flex;
 	    margin-bottom: 20px;
         }
-        .figure img {
-	    width: 30%; /* 각 이미지가 30%의 너비를 차지 */
+        .figure-a img {
+	    width: 45%; /* 각 이미지가 30%의 너비를 차지 */
+	    max-width: 1000px;
+        }
+    	.figure-b {
+	    display: flex;
+	    margin-bottom: 20px;
+        }
+        .figure-b img {
+	    width: 35%; /* 각 이미지가 30%의 너비를 차지 */
+	    max-width: 1000px;
+        }
+	.figure-c {
+	    display: flex;
+	    margin-bottom: 20px;
+        }
+        .figure-c img {
+	    width: 20%; /* 각 이미지가 30%의 너비를 차지 */
 	    max-width: 1000px;
         }
 
@@ -43,7 +59,7 @@
 	    margin: 10px 0;
         }
         .spectrogram img {
-	    width: 30%; /* 각 이미지가 30%의 너비를 차지 */
+	    width: 33%; /* 각 이미지가 30%의 너비를 차지 */
 	    max-width: 1000px;
         }
 
@@ -53,7 +69,7 @@
 	    margin-top: 10px;
         }
         .audio-control audio {
-	    width: 30%; /* 각 오디오 컨트롤이 30%의 너비를 차지 */
+	    width: 33%; /* 각 오디오 컨트롤이 30%의 너비를 차지 */
 	    max-width: 1000px;
         }
         .download-icon {
@@ -120,24 +136,24 @@
 
     <section class="content">
         <div class="dataset-name">Noisy Reverberant Speech Enhancement (4-ch. spatialized DNS challenge dataset)</div>
+
+        <!-- 스펙트로그램 가로 배열 -->
         <div class="spectrogram">
             <img src="./Spectrogram/DNS/noisy.png" alt="Noisy Spectrogram">
             <img src="./Spectrogram/DNS/enhanced.png" alt="Enhanced Spectrogram">
             <img src="./Spectrogram/DNS/target.png" alt="Clean Spectrogram">
         </div>
+
+        <!-- 오디오 컨트롤 가로 배열 -->
         <div class="audio-control">
-            <!-- Add audio controls for each type (noisy, enhanced, clean) -->
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <audio controls>
                 <source src="./Audio/DNS/noisy.wav" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <audio controls>
                 <source src="./Audio/DNS/enhanced.wav" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <audio controls>
                 <source src="./Audio/DNS/target.wav" type="audio/mpeg">
                 Your browser does not support the audio element.
